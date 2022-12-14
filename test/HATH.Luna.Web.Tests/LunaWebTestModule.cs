@@ -1,13 +1,11 @@
-using System.Collections.Generic;
-using System.Globalization;
+using HATH.Luna.Localization;
 using Localization.Resources.AbpUi;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.DependencyInjection;
-using HATH.Luna.Localization;
-using HATH.Luna.Web;
-using HATH.Luna.Web.Menus;
+using System.Collections.Generic;
+using System.Globalization;
 using Volo.Abp.AspNetCore.TestBase;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
