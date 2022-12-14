@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 
-namespace HATH.Luna.Web;
+namespace HATH.Luna;
 
 public class Program
 {
@@ -27,12 +27,12 @@ public class Program
 
         try
         {
-            Log.Information("Starting web host.");
+            Log.Information("Starting HATH.Luna.HttpApi.Host.");
             var builder = WebApplication.CreateBuilder(args);
             builder.Host.AddAppSettingsSecretsJson()
                 .UseAutofac()
                 .UseSerilog();
-            await builder.AddApplicationAsync<LunaWebModule>();
+            await builder.AddApplicationAsync<LunaHttpApiHostModule>();
             var app = builder.Build();
             await app.InitializeApplicationAsync();
             await app.RunAsync();

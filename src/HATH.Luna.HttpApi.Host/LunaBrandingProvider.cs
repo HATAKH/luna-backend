@@ -1,7 +1,7 @@
-﻿using Volo.Abp.Ui.Branding;
-using Volo.Abp.DependencyInjection;
+﻿using Volo.Abp.DependencyInjection;
+using Volo.Abp.Ui.Branding;
 
-namespace HATH.Luna.Web;
+namespace HATH.Luna;
 
 [Dependency(ReplaceServices = true)]
 public class LunaBrandingProvider : DefaultBrandingProvider
