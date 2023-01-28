@@ -4,6 +4,7 @@ using HATH.Luna.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 
@@ -12,9 +13,11 @@ using Volo.Abp.EntityFrameworkCore;
 namespace HATH.Luna.Migrations
 {
     [DbContext(typeof(LunaDbContext))]
-    partial class LunaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230128190234_AbpUpdateToVersion7")]
+    partial class AbpUpdateToVersion7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
