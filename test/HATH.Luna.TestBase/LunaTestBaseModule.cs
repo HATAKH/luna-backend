@@ -43,6 +43,8 @@ public class LunaTestBaseModule : AbpModule
         {
             using (var scope = context.ServiceProvider.CreateScope())
             {
+                // Main Data seeder for the application -- Hamad knows!
+
                 await scope.ServiceProvider
                     .GetRequiredService<IDataSeeder>()
                     .SeedAsync();
